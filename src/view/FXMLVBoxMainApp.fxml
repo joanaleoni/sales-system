@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLVBoxMainAppController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+              <MenuItem fx:id="menuItemRecordCategory" mnemonicParsing="false" onAction="#handleMenuItemRecordCategory" text="Categoria" />
+                  <MenuItem fx:id="menuItemRecordProduct" mnemonicParsing="false" onAction="#handleMenuItemRecordProduct" text="Produto" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="menuItemRecordClient" mnemonicParsing="false" onAction="#handleMenuItemRecordClient" text="Cliente" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="menuItemRecordSupplier" mnemonicParsing="false" onAction="#handleMenuItemRecordSupplier" text="Fornecedor" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Processos">
+            <items>
+              <MenuItem fx:id="menuItemProcessStock" mnemonicParsing="false" onAction="#handleMenuItemProcessStock" text="Estoque" />
+                  <MenuItem fx:id="menuItemProcessSale" mnemonicParsing="false" onAction="#handleMenuItemProcessSale" text="Venda" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Gráficos">
+            <items>
+              <MenuItem fx:id="menuItemChartsSalesPerMonth" mnemonicParsing="false" onAction="#handleMenuItemChartsSalesPerMonth" text="Vendas por  Mês" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Relatórios">
+              <items>
+                <MenuItem fx:id="menuItemReportStock" mnemonicParsing="false" onAction="#handleMenuItemReportStock" text="Estoque" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" prefHeight="382.0" prefWidth="600.0" />
+   </children>
+</VBox>
