@@ -123,8 +123,10 @@ public class FXMLAnchorPaneRecordCategoryController implements Initializable {
         Category category = tableViewCategories.getSelectionModel().getSelectedItem();
         if(category != null) {
             try {
-                categoryDAO.delete(category);
-                loadTableViewCategories();
+                if(AlertDialog.confirmDeleteAction("Tem certeza que deseja excluir a categoria " + category.getDescription() + "?")){
+                    categoryDAO.delete(category);
+                    loadTableViewCategories();
+                }
             } catch (SaleException ex) {
                 AlertDialog.exceptionMessage(ex);
             }
