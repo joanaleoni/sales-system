@@ -19,8 +19,9 @@ public class FXMLVBoxMainAppController {
     @FXML private MenuItem menuItemReportStock;
 
     @FXML
-    void handleMenuItemChartsSalesPerMonth(ActionEvent event) {
-
+    void handleMenuItemChartsSalesPerMonth(ActionEvent event) throws IOException {
+        AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("../view/FXMLAnchorPaneChartsSalesPerMonth.fxml"));
+        anchorPane.getChildren().setAll(a);
     }
 
     @FXML

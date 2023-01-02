@@ -272,8 +272,8 @@ public class SaleDAO {
     }
 
     public Map<Integer, ArrayList> listQuantitySalesPerMonth() {
-        String sql = "SELECT COUNT(id) AS count, EXTRACT(year from data) AS year, "
-                   + "EXTRACT(month from data) AS month FROM sale GROUP BY year, "
+        String sql = "SELECT COUNT(id) AS count, EXTRACT(year from date) AS year, "
+                   + "EXTRACT(month from date) AS month FROM sale GROUP BY year, "
                    + "month ORDER BY year, month";
         Map<Integer, ArrayList> aux = new HashMap();
         
@@ -285,7 +285,7 @@ public class SaleDAO {
                 ArrayList line = new ArrayList();
                 if (!aux.containsKey(rs.getInt("year")))
                 {
-                    line.add(rs.getInt("moth"));
+                    line.add(rs.getInt("month"));
                     line.add(rs.getInt("count"));
                     aux.put(rs.getInt("year"), line);
                 }else{
