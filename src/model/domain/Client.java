@@ -11,16 +11,16 @@ public class Client {
     private String name;
     private String cpf;
     private String phone;
-    private String adress;
+    private String address;
     private LocalDate birthDate;
 
     public Client() {}
 
-    public Client(String name, String cpf, String phone, String adress, LocalDate birthDate) {
+    public Client(String name, String cpf, String phone, String address, LocalDate birthDate) {
         this.name = name;
         this.cpf = cpf;
         this.phone = phone;
-        this.adress = adress;
+        this.address = address;
         this.birthDate = birthDate;
     }
 
@@ -56,12 +56,12 @@ public class Client {
         this.phone = phone;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public LocalDate getBirthDate() {

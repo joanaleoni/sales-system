@@ -40,8 +40,9 @@ public class FXMLVBoxMainAppController {
     }
 
     @FXML
-    void handleMenuItemRecordClient(ActionEvent event) {
-
+    void handleMenuItemRecordClient(ActionEvent event) throws IOException {
+        AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("../view/FXMLAnchorPaneRecordClient.fxml"));
+        anchorPane.getChildren().setAll(a);
     }
 
     @FXML
