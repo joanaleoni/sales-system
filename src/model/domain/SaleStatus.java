@@ -5,9 +5,9 @@ package model.domain;
  * @author joana
  */
 public enum SaleStatus {
-    COMPLETED(1, "Completed"),
-    CANCELED(2, "Canceled"),
-    OPEN(3, "Open");
+    COMPLETED(1, "Finalizada"),
+    CANCELED(2, "Cancelada"),
+    OPEN(3, "Aberta");
     
     private int id;
     private String description;

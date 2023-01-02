@@ -5,9 +5,9 @@ package model.domain;
  * @author joana
  */
 public enum Situation {
-    ACTIVE(1, "Active"), 
-    INACTIVE(2, "Inactive"), 
-    BLOCKED(3, "Blocked");
+    ACTIVE(1, "Ativo"), 
+    INACTIVE(2, "Inativo"), 
+    BLOCKED(3, "Bloqueado");
     
     private int id;
     private String description;
