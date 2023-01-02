@@ -16,3 +16,4 @@
 - Enumerações
 - Manipulação de dados do tipo LocalDate
 - Aplicação de máscara em campos de CPF e datas
+- Encapsulamento
