@@ -5,7 +5,7 @@
 - Padrão MVC
 - Conexão com banco de dados (driver JDBC - MySQL)
 - Operações CRUD de acesso à banco de dados
-- Geração de relatório com JasperReport
+- Geração de relatório com JasperReports
 - Interface gráfica com JavaFX
 - Herança
 - Associação entre classes
