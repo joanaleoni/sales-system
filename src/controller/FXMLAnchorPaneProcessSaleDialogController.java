@@ -61,7 +61,7 @@ public class FXMLAnchorPaneProcessSaleDialogController implements Initializable 
     @FXML private TextField tfProductQuantity;
     @FXML private Button btAdd;
     @FXML private TextField tfDiscount;
-    @FXML private ChoiceBox choiceBoxSituation;
+    @FXML private ChoiceBox choiceBoxStatus;
     @FXML private Button btConfirm;
     @FXML private Button btCancel;
     
@@ -90,7 +90,7 @@ public class FXMLAnchorPaneProcessSaleDialogController implements Initializable 
         
         loadComboBoxClients();
         loadComboBoxProducts();
-        loadChoiceBoxSituation();
+        loadChoiceBoxStatus();
         setFocusLostHandle();
         
         tableColumnProduct.setCellValueFactory(new PropertyValueFactory<>("product"));
@@ -113,9 +113,9 @@ public class FXMLAnchorPaneProcessSaleDialogController implements Initializable 
         cbProducts.setItems(observableListProducts);
     }
     
-    private void loadChoiceBoxSituation(){
-        choiceBoxSituation.setItems(FXCollections.observableArrayList(SaleStatus.values()));
-        choiceBoxSituation.getSelectionModel().select(0);
+    private void loadChoiceBoxStatus(){
+        choiceBoxStatus.setItems(FXCollections.observableArrayList(SaleStatus.values()));
+        choiceBoxStatus.getSelectionModel().select(0);
     }
     
     private void setFocusLostHandle() {
@@ -159,7 +159,7 @@ public class FXMLAnchorPaneProcessSaleDialogController implements Initializable 
             tableViewSaleItems.setItems(observableListSaleItems);
             tfTotal.setText(String.format("%.2f", this.sale.getTotal()));
             tfDiscount.setText(String.format("%.2f", this.sale.getDiscountFee()));
-            choiceBoxSituation.getSelectionModel().select(this.sale.getSaleStatus());
+            choiceBoxStatus.getSelectionModel().select(this.sale.getSaleStatus());
         }
     }
 
@@ -245,7 +245,7 @@ public class FXMLAnchorPaneProcessSaleDialogController implements Initializable 
             sale.setClient(cbClients.getSelectionModel().getSelectedItem());
             sale.setPaid(checkBoxPaid.isSelected());
             sale.setDate(dpDate.getValue());
-            sale.setSaleStatus((SaleStatus)choiceBoxSituation.getSelectionModel().getSelectedItem());
+            sale.setSaleStatus((SaleStatus)choiceBoxStatus.getSelectionModel().getSelectedItem());
             sale.setDiscountFee(Double.parseDouble(tfDiscount.getText()));
             buttonConfirmClicked = true;
             dialogStage.close();

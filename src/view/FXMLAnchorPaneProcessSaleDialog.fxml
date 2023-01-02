@@ -104,7 +104,7 @@
                   <Insets right="5.0" />
                </GridPane.margin>
             </Label>
-            <ChoiceBox fx:id="choiceBoxSituation" prefHeight="26.0" prefWidth="340.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <ChoiceBox fx:id="choiceBoxStatus" prefHeight="26.0" prefWidth="340.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
          </children>
       </GridPane>
       <Group layoutX="296.0" layoutY="290.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
