@@ -24,8 +24,9 @@ public class FXMLVBoxMainAppController {
     }
 
     @FXML
-    void handleMenuItemProcessSale(ActionEvent event) {
-
+    void handleMenuItemProcessSale(ActionEvent event) throws IOException {
+        AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("../view/FXMLAnchorPaneProcessSale.fxml"));
+        anchorPane.getChildren().setAll(a);
     }
 
     @FXML

@@ -77,7 +77,7 @@ public class StockDAO{
         return products;
     }
     
-    public Product getEstoque(Product product) {
+    public Product getStock(Product product) {
         String sql = "SELECT * FROM stock INNER JOIN product ON product.id = stock.id_product WHERE stock.id_product = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);

@@ -17,6 +17,7 @@ public class Sale {
     private double discountFee;
     private static String company;
     private Client client;
+    private SaleStatus saleStatus;
     
     private List<SaleItem> saleItems;
 
@@ -75,6 +76,18 @@ public class Sale {
 
     public List<SaleItem> getSaleItems() {
         return saleItems;
+    }
+
+    public void setSaleItems(List<SaleItem> saleItems) {
+        this.saleItems = saleItems;
+    }
+    
+    public SaleStatus getSaleStatus() {
+        return saleStatus;
+    }
+
+    public void setSaleStatus(SaleStatus saleStatus) {
+        this.saleStatus = saleStatus;
     }
     
     public void add(SaleItem saleItem){
