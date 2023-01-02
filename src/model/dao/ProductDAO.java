@@ -114,6 +114,25 @@ public class ProductDAO{
         return products;
     }    
     
+    public List<Product> listByStock() throws SaleException {
+        String sql =  "SELECT * FROM product p INNER JOIN stock s ON p.id = s.id_product";
+        List<Product> products = new ArrayList<>();
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+            
+            while(rs.next()) {
+                Product product = populateFullVO(rs);
+                products.add(product);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SaleException ex) {
+            throw new SaleException("Não foi possível buscar os produtos.");
+        }
+        return products;
+    }
+    
     public List<Product> listByCategory(Category category) {
         String sql =  "SELECT p.id AS product_id, p.name AS product_name, p.description AS product_description, p.price AS product_price, "
                 + "c.id AS category_id, c.description AS category_description "
