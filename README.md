@@ -1,5 +1,5 @@
 # :shopping: Sales System
-> Sistema gerenciador de vendas | Java, MySQL, JavaFX, JasperReports
+> Sistema gerenciador de vendas | Java, JDBC, MySQL, JavaFX, JasperReports
 
 ## Conteúdos exercitados
 - Padrão MVC
